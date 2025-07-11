@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  annotator:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app # 開発時にホットリロードしたい場合
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
